@@ -1,0 +1,11 @@
+.social-networks-list {
+  display: flex;
+  gap: 25px;
+
+  a {
+    display: block;
+    max-width: 30px;
+    max-height: 30px;
+    width: fit-content;
+  }
+}

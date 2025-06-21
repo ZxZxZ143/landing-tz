@@ -1,0 +1,62 @@
+
+.button-group {
+  width: fit-content;
+  display: flex;
+  gap: 30px;
+  position: absolute;
+  bottom: 110px;
+  right: 90px;
+
+  @media screen and (max-width: $screen-md-max) {
+    bottom: 80px;
+    right: 80px;
+  }
+
+  @media screen and (max-width: $screen-xs-max) {
+    bottom: 60px;
+    right: 20px;
+  }
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: transparent;
+  z-index: 2;
+
+  @media screen and (max-width: $screen-sm-max) {
+    width: 54px;
+    height: 54px;
+  }
+
+  @media screen and (max-width: $screen-xs-max) {
+    width: 48px;
+    height: 48px;
+  }
+
+  svg {
+    width: 12px;
+    height: auto;
+    path {
+      fill: $c-font-banner;
+    }
+  }
+
+  &--next {
+    svg {
+      rotate: -90deg;
+    }
+  }
+
+  &--prev {
+    svg {
+      rotate: 90deg;
+    }
+  }
+}
+

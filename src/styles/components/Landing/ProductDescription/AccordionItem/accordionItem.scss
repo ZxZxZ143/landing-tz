@@ -1,0 +1,63 @@
+.accordion-item {
+  width: 100%;
+  padding: 25px;
+  border-radius: 20px;
+  border: 1px solid $c-border-product-desc;
+
+  &--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    & > svg {
+      width: 14px;
+      height: auto;
+      transition: .3s;
+
+      path {
+        fill: $c-icon-accordion;
+      }
+    }
+
+    .upwards {
+      rotate: 180deg;
+    }
+  }
+
+  &--title {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    color: $c-font-accordion;
+
+    p {
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 130%;
+
+      @media screen and (max-width: $screen-xs-max) {
+        font-size: 20px;
+      }
+    }
+
+    svg {
+      height: 100%;
+      max-height: 24px;
+      width: auto;
+    }
+  }
+
+  &--body {
+    max-height: 0;
+    height: fit-content;
+    transition: 0.2s;
+    overflow: hidden;
+    font-size: 17px;
+
+    &--open {
+      max-height: 500px;
+      margin-top: 20px;
+    }
+  }
+}

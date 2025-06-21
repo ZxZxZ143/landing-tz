@@ -1,0 +1,135 @@
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 44px;
+
+  @media screen and (max-width: $screen-sm-max) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &--links {
+    display: flex;
+    gap: 120px;
+
+    @media screen and (max-width: $screen-md-max) {
+      gap: 80px;
+    }
+
+    @media screen and (max-width: $screen-sm-max) {
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+  }
+
+  &--contacts {
+    width: 40%;
+
+    @media screen and (max-width: $screen-sm-max) {
+      width: fit-content;
+    }
+
+    & > p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: $c-font-footer-transparent;
+      margin-bottom: 20px;
+
+      @media screen and (max-width: $screen-sm-max) {
+        margin-bottom: 15px;
+      }
+    }
+
+    .contact--question {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 140%;
+      margin-bottom: 20px;
+      color: $c-font-footer;
+
+      @media screen and (max-width: $screen-sm-max) {
+        margin-bottom: 15px;
+      }
+    }
+
+    .email-form {
+      width: 100%;
+      display: flex;
+      margin-bottom: 20px;
+
+      @media screen and (max-width: $screen-sm-max) {
+        margin-bottom: 40px;
+      }
+
+      .submit-btn {
+        padding: 12px 35px;
+        height: 48px;
+
+        @media screen and (max-width: $screen-md-max) {
+          padding: 12px 30px;
+        }
+      }
+
+      label {
+        display: block;
+        width: 100%;
+        max-width: 400px;
+        padding: 12px 15px;
+        margin-right: 18px;
+        border: 1px solid $c-border-footer;
+        outline: none;
+        border-radius: 12px;
+
+        input {
+          background: transparent;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 140%;
+          color: $c-font-footer-transparent;
+          border: none;
+          outline: none;
+
+          &::placeholder {
+            color: $c-font-footer-grey;
+          }
+        }
+      }
+    }
+
+    &--socialNetworks {
+      p {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        color: $c-font-footer;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &--additional-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 30px;
+
+    @media screen and (max-width: $screen-sm-max) {
+      margin-top: 40px;
+    }
+
+    @media screen and (max-width: $screen-xs-max) {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 130%;
+      color: $c-font-footer-transparent;
+    }
+  }
+}
